@@ -16,6 +16,7 @@ el objetivo de confirmar los comentarios básicos de la logica de programación.
  |--|--|--|
  |1.|Metodología de Evaluación|✅✅Finalizada|
  |2.| Inicialización del Proyecto de Fundamentos de JS|Activa|
+ |3.| Ejercicio 01: Declaración de Variables de JS||Activa|
 
 ### Autor
 Esther González Peralta

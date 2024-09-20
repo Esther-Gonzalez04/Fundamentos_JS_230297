@@ -134,11 +134,16 @@ const numero9=Symbol("5.0")
 
 //Pruebas conparativas
 
+//1
+
+
 console.log("¿Es 5=5.0?");
 if(numero1==numero2) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
 console.log("Se comparó numero1 con número2, determinando que tienenen el mismo valor")
 else
 console.log("Se comparó numero1 con numero2, determinando que NO tienene el mismo valor")
+
+//2
 
 
 console.log("¿Es 5=\"5\"?");
@@ -148,6 +153,8 @@ else
 console.log("Se comparó numero1 con numero3, determinando que NO tienene el mismo valor")
 
 
+//3
+
 console.log("¿Es 5===\"5\"?");
 if(numero1===numero3) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
 
@@ -156,12 +163,16 @@ console.log("Se comparó numero1 con número3, determinando que tienenen el mism
 else
 console.log("Se comparó numero1 con numero3, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
 
+//4
+
 
 console.log("¿Es 5==\"5.0\"?");
 if(numero1==numero4) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
 console.log("Se comparó numero1 con número4, determinando que tienenen el mismo valor")
 else
 console.log("Se comparó numero1 con numero4, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+
+//5
 
 
 console.log("¿Es 5===\"5.0\"?");
@@ -172,6 +183,7 @@ console.log("Se comparó numero1 con número4, determinando que tienenen el mism
 else
 console.log("Se comparó numero1 con numero4, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
 
+//6
 
 console.log(`¿Es 5===symbol(5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero5)}`);
 if(numero1==numero5) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
@@ -180,3 +192,86 @@ console.log("Se comparó numero1 con número5, determinando que tienenen el mism
 
 else
 console.log("Se comparó numero1 con numero5, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+
+//7
+
+console.log(`¿Es 5===symbol(5.0)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero7)}`);
+if(numero1==numero7) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
+
+console.log("Se comparó numero1 con número7, determinando que tienenen el mismo valor y el mismo tipo de dato")
+
+else
+console.log("Se comparó numero1 con numero7, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+
+//8
+
+console.log(`¿Es 5===\"5.0\"?")?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero8)}`);
+if(numero1==numero8) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
+
+console.log("Se comparó numero1 con número8, determinando que tienenen el mismo valor y el mismo tipo de dato")
+
+else
+console.log("Se comparó numero1 con numero8, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+
+
+//9
+console.log(`¿Es 5===symbol("5.0")?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero9)}`);
+if(numero1==numero9) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
+
+console.log("Se comparó numero1 con número9, determinando que tienenen el mismo valor y el mismo tipo de dato")
+
+else
+console.log("Se comparó numero1 con numero9, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+
+//10
+
+console.log(`¿Es symbol (5)===symbol (5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero5)} y numero5  del tipo ${typeof(numero6)}`);
+if(numero5==numero6) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
+
+console.log("Se comparó numero5 con número6, determinando que tienenen el mismo valor y el mismo tipo de dato")
+
+else
+console.log("Se comparó numero5 con numero6, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato es la condición de symbol la que lo hace unico en la memoria.")
+
+// 7. NULL
+
+console.warn ("---Tipo de dato -NULL (Nulo o vacío)");
+
+// El tipo de dato null se asigna cuando el sistema o el usuario saben de la variable pero prefieren dejarlo vaciío, bajo su consentiemiento a diferencia de undefiend que es un valor conocido asignado por DEAFAULT por JS.
+
+let nombreUsuario=null;
+let passUsuario=null;
+let generoUsuario=null;
+let estatusRelacionSentimental=null;
+let fecha_ultimoPost;
+
+// Supongamos que estamos programando que una red social, topo Facebook, en la que parte de la informacion se publicara en el perfil del usuario.
+
+// Si el usuario no ha iniciado sesion en el dispositivo móvil o en la palicación web puede explorar contenido de acceso público, y no existira información para mostarr.
+
+// En la HU (Historia d Uusuario), que el usuario desea logearse ddbera ingresar su numero telefonico o correo electónico y una constraseña que deberemos guardar en las variables previamente decalaradas.
+
+// Supongamos  que el usuario: Marco A. con corro electrónico marco.ram@gmail.com desea ingresar con su contraseña: pass1234
+
+nombreUsuario= "marco.ram@gmail.com";
+passUsuario="pass123";
+ 
+
+// En este momento de ejecución del sistema no sabemos su genero, ni sus estatus de relación sentimental.
+ console.log(`el usuario: ${nombreUsuario} esta intentando logearse con una contraseña de: ${passUsuario}`);
+
+ //lo que prosigue es que el sistema cotejara los datos ingresados con la base de datos y en caso de que los datos sean correctos comenzara la sesión en la plataforma actualizando estos valores.
+
+ //Dado que Marco es del género Masculino y denota que u estatus de ralación no ha sido capturado o lo mantiene privado esto generara la actualización de los valores de las variables
+
+ generoUsuario="M"
+ estatusRelacionSentimental=null
+
+ console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su informacion de perfil podemos deducir que es del género ${generoUsuario} y que esu estatus de relación es: ${estatusRelacionSentimental} y su ultima publicación la realizó el: ${fecha_ultimoPost}`);
+
+ // Comprando NULL vs UNDDEFINED
+
+ //sI BIEN UNDEFINED Y NULL tienen el mismo valor, no tienen el mismo tipo de dato
+
+
+

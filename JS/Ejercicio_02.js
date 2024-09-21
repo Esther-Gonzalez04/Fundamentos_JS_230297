@@ -18,7 +18,6 @@ console.log(`El tipo de dato de la variable del cliente es:${typeof(cliente)}`);
 
 //console.log(`El cliente ha realizado ${NumCompras} en este mes`);
 
-
 //undefined es el tipo de dato que por defecto se asigna a variables no inicializada o no declaradas 
 
 // 2. BOOLEAN -Boleanos- TRUE-FALSE (Falso/Verdaero)
@@ -43,7 +42,6 @@ if(esPremium)
     console.log("El cliente pago por usar el servicio.")
 else
     console.log("El cliente recibe los servicios gratuitos");
-
 
 // 3. Number (Números)
 
@@ -77,13 +75,11 @@ let producto;
  console.log(`el nombre del PRODUCTO es: ${producto},que es un tipo de dato ${typeof(producto)}`);
 
  //manipulando los sSTRING
-
  
  console.log(`Masadelante podremos transformar el contenido de los STRING usando los mtodos
   y funciones específicas, como convertir su valor a mayúsculas: ${alumno} => ${alumno.toUpperCase()}`);
 
   console.log(`o en su defecto a minúscula: ${producto} => ${producto.toLowerCase()}`);
-
 
 
 //5. BIGINT (NÚMERO DE MAYOR AMPLITUD)
@@ -118,124 +114,95 @@ fue convertido a BEGINT, Y su tipo de dato es : ${typeof(numeroGrande4)}`)
 //const numero = 129;
 //console.log (`Intentando realizar la suma: numero + numeroGrande3, el resultado es: ${BigInt(numero)+numeroGrande}`);
 
-
 // 6.SYMBOL (Simbolo)
 
-console.warn("---Tipo de dato SYMBOL(Símbolo o único)")
-const numero1= 5;
-const numero2= 5.0;
+console.warn("--- Tipo de Dato SYMBOL (Símbolo o Único)")
+//Números son números en JavaScript
+//Symbol referencia única en memoria
+const numero1=5;
+const numero2=5.0;
 const numero3="5";
-const numero4="5.0"
-const numero5= Symbol(5)
-const numero6=Symbol(5)
-const numero7= Symbol(5.0)
-const numero8=Symbol("5")
-const numero9=Symbol("5.0")
+const numero4="5.0";
+const numero5=Symbol(5);
+const numero6=Symbol(5);
+const numero7=Symbol(5.0);
+const numero8=Symbol("5");
+const numero9=Symbol("5.0");
 
-//Pruebas conparativas
-
-//1
-
-
-console.log("¿Es 5=5.0?");
-if(numero1==numero2) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-console.log("Se comparó numero1 con número2, determinando que tienenen el mismo valor")
+//Pruebas comparativas
+console.log("¿Es 5 = 5.0?");
+if(numero1==numero2)
+    console.log("Se comparó numero1 con numero2, determinando que tienen el mismo valor.");
 else
-console.log("Se comparó numero1 con numero2, determinando que NO tienene el mismo valor")
+    console.log("Se comparó numero1 con numero2, determinando que NO tienen el mismo valor.")
 
-//2
-
-
-console.log("¿Es 5=\"5\"?");
-if(numero1==numero3) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-console.log("Se comparó numero1 con número3, determinando que tienenen el mismo valor")
+//
+console.log("¿Es 5 = \"5\"?");
+if(numero1==numero3)
+    console.log("Se comparó numero1 con numero3, determinando que tienen el mismo valor.");
 else
-console.log("Se comparó numero1 con numero3, determinando que NO tienene el mismo valor")
+    console.log("Se comparó numero1 con numero3, determinando que NO tienen el mismo valor.")
 
-
-//3
-
-console.log("¿Es 5===\"5\"?");
-if(numero1===numero3) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número3, determinando que tienenen el mismo valor")
-
+//
+console.log("¿Es 5 === \"5\"?");
+if(numero1===numero3) //Estrictamente igual "===" (Equidad) = Mismo valor, mismo tipo de dato.
+    console.log("Se comparó numero1 con numero3, determinando que tienen el mismo valor.");
 else
-console.log("Se comparó numero1 con numero3, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
-
-//4
-
-
-console.log("¿Es 5==\"5.0\"?");
-if(numero1==numero4) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-console.log("Se comparó numero1 con número4, determinando que tienenen el mismo valor")
+    console.log("Se comparó numero1 con numero3, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
+   
+//
+console.log("¿Es 5 == \"5.0\"?");
+if(numero1==numero4) //Estrictamente igual "===" (Equidad) = Mismo valor, mismo tipo de dato.
+    console.log("Se comparó numero1 con numero4, determinando que tienen el mismo valor.");
 else
-console.log("Se comparó numero1 con numero4, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+    console.log("Se comparó numero1 con numero4, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
 
-//5
-
-
-console.log("¿Es 5===\"5.0\"?");
-if(numero1===numero4) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número4, determinando que tienenen el mismo valor")
-
+//
+console.log("¿Es 5 === \"5.0\"?");
+if(numero1===numero4) //Estrictamente igual "===" (Equidad) = Mismo valor, mismo tipo de dato.
+    console.log("Se comparó numero1 con numero4, determinando que tienen el mismo valor.");
 else
-console.log("Se comparó numero1 con numero4, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
-
-//6
-
-console.log(`¿Es 5===symbol(5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero5)}`);
-if(numero1==numero5) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número5, determinando que tienenen el mismo valor y el mismo tipo de dato")
-
+    console.log("Se comparó numero1 con numero4, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
+    
+//
+console.log(`¿Es 5 === Symbol(5)? Antes de compararlos analizamos que tipo de dato son: siendo numero1 del tipo ${typeof(numero1)} y numero5 del tipo ${typeof(numero5)}`);
+if(numero1==numero5)
+    console.log("Se comparó numero1 con numero5, determinando que tienen el mismo valor y el mismo tipo de dato.");
 else
-console.log("Se comparó numero1 con numero5, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+    console.log("Se comparó numero1 con numero5, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
 
-//7
-
-console.log(`¿Es 5===symbol(5.0)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero7)}`);
-if(numero1==numero7) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número7, determinando que tienenen el mismo valor y el mismo tipo de dato")
-
+//
+console.log(`¿Es 5 === Symbol(5.0)? Antes de compararlos analizamos que tipo de dato son: siendo numero1 del tipo ${typeof(numero1)} y numero7 del tipo ${typeof(numero7)}`);
+if(numero1==numero7)
+    console.log("Se comparó numero1 con numero7, determinando que tienen el mismo valor y el mismo tipo de dato.");
 else
-console.log("Se comparó numero1 con numero7, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+    console.log("Se comparó numero1 con numero7, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
 
-//8
-
-console.log(`¿Es 5===\"5.0\"?")?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero8)}`);
-if(numero1==numero8) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número8, determinando que tienenen el mismo valor y el mismo tipo de dato")
-
+//
+console.log(`¿Es 5 === Symbol("5")? Antes de compararlos analizamos que tipo de dato son: siendo numero1 del tipo ${typeof(numero1)} y numero8 del tipo ${typeof(numero8)}`);
+if(numero1==numero8) 
+    console.log("Se comparó numero1 con numero8, determinando que tienen el mismo valor y el mismo tipo de dato.");
 else
-console.log("Se comparó numero1 con numero8, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+    console.log("Se comparó numero1 con numero8, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
 
-
-//9
-console.log(`¿Es 5===symbol("5.0")?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero1)} y numero5  del tipo ${typeof(numero9)}`);
-if(numero1==numero9) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero1 con número9, determinando que tienenen el mismo valor y el mismo tipo de dato")
-
+//
+console.log(`¿Es 5 === Symbol("5.0")? Antes de compararlos analizamos que tipo de dato son: siendo numero1 del tipo ${typeof(numero1)} y numero9 del tipo ${typeof(numero9)}`);
+if(numero1==numero9) //Estrictamente igual "===" (Equidad) = Mismo valor, mismo tipo de dato.
+    console.log("Se comparó numero1 con numero9, determinando que tienen el mismo valor y el mismo tipo de dato.");
 else
-console.log("Se comparó numero1 con numero9, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato.")
+    console.log("Se comparó numero1 con numero9, determinando que tienen el mismo valor, pero NO el mismo tipo de DATO.")
 
-//10
-
-console.log(`¿Es symbol (5)===symbol (5)?, antes de compararlos analizamos que tipo de dato son: siendo numero1 ${typeof(numero5)} y numero5  del tipo ${typeof(numero6)}`);
-if(numero5==numero6) //estrictamente igual "===" (Equidad)= mismo valor, mismo tipo d dato
-
-console.log("Se comparó numero5 con número6, determinando que tienenen el mismo valor y el mismo tipo de dato")
-
+//
+console.log(`¿Es Symbol(5) === Symbol(5)? Antes de compararlos analizamos que tipo de dato son: siendo numero5 del tipo ${typeof(numero5)} y numero6 del tipo ${typeof(numero6)}`);
+if(numero5===numero6) //Estrictamente igual "===" (Equidad) = Mismo valor, mismo tipo de dato.
+    console.log("Se comparó numero5 con numero6, determinando que tienen el mismo valor y el mismo tipo de dato.");
 else
-console.log("Se comparó numero5 con numero6, determinando que tienene el mismo valor, pero NO es el mismo tipo de Dato es la condición de symbol la que lo hace unico en la memoria.")
+    console.log("Se comparó numero5 con numero5, determinando que tienen el mismo valor, y el mismo tipo de dato, es la condición de Symbol lo que lo hace único en la memoria.")
+
 
 // 7. NULL
 
-console.warn ("---Tipo de dato -NULL (Nulo o vacío)");
+console.warn ("---Tipo de dato -NULL (Núlo o vacío)");
 
 // El tipo de dato null se asigna cuando el sistema o el usuario saben de la variable pero prefieren dejarlo vaciío, bajo su consentiemiento a diferencia de undefiend que es un valor conocido asignado por DEAFAULT por JS.
 
@@ -269,9 +236,31 @@ passUsuario="pass123";
 
  console.log(`El usuario: ${nombreUsuario}, se ha logeado exitosamente, al tener acceso a su informacion de perfil podemos deducir que es del género ${generoUsuario} y que esu estatus de relación es: ${estatusRelacionSentimental} y su ultima publicación la realizó el: ${fecha_ultimoPost}`);
 
- // Comprando NULL vs UNDDEFINED
+//Comparando NULL Y UNDEFINED
+//Si bien UNDEFINED y NULL tienen el mismo valor, no tienen el mismo tipo de dato.
 
- //sI BIEN UNDEFINED Y NULL tienen el mismo valor, no tienen el mismo tipo de dato
+console.log("Comparación de la equidad entre UNDEFINED y NULL");
+console.log(
+    (fecha_ultimoPost==estatusRelacionSentimental) ? 
+    "Ambas variables tienen el mismo valor" : 
+    "Las variables no tienen el mismo valor");
+
+console.log("Comparación entre la identidad entre UNDEFINED y NULL");
+console.log(
+    (fecha_ultimoPost===estatusRelacionSentimental) ?
+    "Ambas variables tienen el mismo valor y el mismo tipo de dato" :
+    "Las variables tienen el mismo valor, pero no el mismo tipo de dato"
+);
 
 
+//8. FUNCTION (Funciones)
+console.warn("--- Tipo de Dato FUNCTION (Función)")
 
+//Declaramos una función que nos permita recibir un parámetro, en este caso, el nombre de la persona a saludar, y le enviamos un saludo. Esta función la asignamos a una constante.
+const saludar=function(nombre){return`Hola, ${nombre}!`}
+
+//Invocamos a la función declarada
+console.log(saludar('Esther González'));
+
+//Y que tipo de dato tiene esta constante.
+console.log(`El tipo de dato de la constante saludar es: ${typeof(saludar)}`);

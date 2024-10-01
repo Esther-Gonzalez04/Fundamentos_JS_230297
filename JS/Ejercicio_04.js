@@ -13,7 +13,7 @@ console.warn("Práctica 06:Arreglos en Java Script")
 
 //Para aclarar un arreglo (array) de datos en JavaScript basta con agregar [], t dentro los datos que contendra el arreglo.
 
-const mesesAnio=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Junio", "Julio", "Agosto", "Septiembre", "Octubre","Nomviembre", "Diciembre"]
+const mesesAnio=["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre","Noviembre", "Diciembre"]
 
 console.log("%c1.- Dreclaracón de un Arreglo (Array)", style_console);
 console.log(mesesAnio);
@@ -34,10 +34,14 @@ console.log(`El treceabo mes del año de la posición es: ${mesesAnio[12]}`)
 
 console.log(`¿Qué tipo de dato es un arreglo?: ${typeof(mesesAnio)}`)
 
+//Al ser JavaScript un lenguaje debilmente tipado podremos crear arreglos mixtos de tipos de Datos
+
+console.log("Declarar un arreglo mixto")
+const saludar= function(nombre){return `Hola, ${nombre}!`}
+
 
 //A l ser JavaScript un lenguaje debilmente tipados podremos crear arreglos mixtos de topos de datos 
-
-let arregloMixto=["String", 5,45.26,-200, -.16854, Symbol("MARH"), 'z', false, BigInt(1111222233334444555566667777), true,{ latitud:"20° 18' 0\" N", logitud: "97° 58' 00\ w", altitud:796}, saludar, null]
+let arregloMixto=["String", 9, 45.26,-200,-.16853,Symbol("Esther"), 'z', false, BigInt(1111112222222333334444444555566666777), true, {latitud:"20°18'0\" N" , longitud: "97°58'00\" W" , altitud:796}, null]
 
 //Mostramos el contenido del objeto
 
@@ -52,17 +56,22 @@ console.log(`El dato en la posicion[0]=${arregloMixto[1]} y es del tipo: ${(type
 console.log(`El dato en la posicion[0]=${arregloMixto[2]} y es del tipo: ${(typeof(arregloMixto[2]))}`);
 console.log(`El dato en la posicion[0]=${arregloMixto[3]} y es del tipo: ${(typeof(arregloMixto[3]))}`);
 console.log(`El dato en la posicion[0]=${arregloMixto[4]} y es del tipo: ${(typeof(arregloMixto[4]))}`);
-console.log(`El dato en la posicion[0]=${arregloMixto[5]} y es del tipo: ${(typeof(arregloMixto[5]))}`);
-console.log(`El dato en la posicion[0]=${arregloMixto[6]} y es del tipo: ${(typeof(arregloMixto[6]))}`);
-console.log(`El dato en la posicion[0]=${arregloMixto[7]} y es del tipo: ${(typeof(arregloMixto[7]))}`);
-console.log(`El dato en la posicion[0]=${arregloMixto[8]} y es del tipo: ${(typeof(arregloMixto[8]))}`);
+console.log(`El dato en la posición[5]= ${arregloMixto[5].toString} y es del tipo: ${(typeof(arregloMixto[5]))}`)
+console.log(`El dato en la posición[6]= ${arregloMixto[6]} y es del tipo: ${(typeof(arregloMixto[6]))}`)
+console.log(`El dato en la posición[7]= ${arregloMixto[7]} y es del tipo: ${(typeof(arregloMixto[7]))}`)
+console.log(`El dato en la posición[8]= ${arregloMixto[8]} y es del tipo: ${(typeof(arregloMixto[8]))}`)
+console.log(`El dato en la posición[9]= ${arregloMixto[9]} y es del tipo: ${(typeof(arregloMixto[9]))}`)
+console.log(`El dato en la posición[10]= ${arregloMixto[10]} y es del tipo: ${(typeof(arregloMixto[10]))}`)
+console.log(`El dato en la posición[11]= ${arregloMixto[11]} y es del tipo: ${(typeof(arregloMixto[11]))}`)
+console.log(`El dato en la posición[12]= ${arregloMixto[12]} y es del tipo: ${(typeof(arregloMixto[12]))}`)
 
 console.log("%c3.-  Areglos multidimencionales (matrices)", style_console);
 
 console.log("Declaracion de una amatriz regular")
 //Una matriz es una estructura de datos multidimensional (tabla) de n columnas o m filas
 
-let matriz=[[1,2,3,4], [a, b, c, d]]
+
+let matriz=[[1,2,3,4], ['a','b','c','d']]
 //esta es una matriz regular de 4x4
 
 console.log(matriz)
@@ -95,12 +104,13 @@ console.log("%c4.-  Funciones o métodos de los arrglos (Array Methos or Array F
 console.log("¿Cómo saber cual es el tamaño de un arreglo?");
 console.log(`mesesAnio es un arreglo de tamaño: ${mesesAnio.length}`)
 console.log(`arregloMixto es un arreglo de tamaño ${arregloMixto.length}`)
-onsole.log(`¿Qué pasa con los multidimencionales?`)
-onsole.log(`matriz de un arreglo de tamaño; ${matriz.length}`) //La cuenta de arriba a abajo dando el umero de filas 
-console.log(`matriz de un arreglo de tamaño ${matriz[0].length}`)
+console.log("¿Qué pasa con los multidimensionales?")
+console.log(`matriz es un arreglo de tamaño: ${matriz.length}`)
+console.log("mmm, eso me da el tamaño de numero de las filas de la matriz, pero cómo saber el número de columna?")
+console.log(`matriz regular tiene un numero de ${matriz[0].length}`)
 console.log("¿Y para las iregulares?")
 //para saber la dimension de una matriz irregular podemos hacer el uso de un ciclo 
 
-let numeroFilas= matrizIrre.length
+let numeroFilas= matrizIrregular.length
 for(let i=0; i<numeroFilas; i++)
-    console.log(`La longitud de la fila  ${[i]} es ${[matrizIrregular[i].length]}`)
+    console.log(`La longitud de la fila  ${[i]} es = ${[matrizIrregular[i].length]}`)

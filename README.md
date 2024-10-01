@@ -18,7 +18,7 @@ el objetivo de confirmar los comentarios básicos de la logica de programación.
  |2.|Inicialización del Proyecto de Fundamentos de JS|8|✅✅Finalizada|
  |3.|Ejercicio 01: Declaración de Variables de (Undefined/Boolean/Number)|10|✅✅Finalizada|
  |4.|Ejercicio 02: Declaración de Variables de (String/BigInt/Symbol/Null/Function)|6|✅✅Finalizada|
- |5.|---|---|Activa|
+ |5.|Ejercicio 03: Repaso de Objetos|---|✅✅Finalizada|
  
 ### Autor
 Esther González Peralta

@@ -5,9 +5,9 @@ const bg = "linear-gradient(11deg, rgba(0,199,36,1) 0%, rgba(129,255,26,1) 33%, 
 const style_console = `background: ${bg}; color: white; border-radius: 6px; padding: 4px; font-size: 1.0rem; font-weight: bold`
 //Personalizacion de las salidas de consola
 
-console.warn("Práctica 06:Arreglos en Java Script")
+console.warn("Práctica 07:Arreglos en Java Script")
 
-console.log("%c1.- Si/Entonces", style_console);
+console.log("%c1.- Condicionales - Si/Entonces... (IF)", style_console);
 
 //Le indica al programa que hacer o que no en base a una prueba lógica de verdadero p falso
 let fechaActual=new Date();
@@ -112,17 +112,25 @@ console.log(evaluarMayoriaEdad(edadPersona, "USA"))
 console.log("%c3.- SWITCH - CASE (Elección por valor definido)", style_console);
 
 //Calculando tu generación en base a tu edad
+let anioNacimiento;
+let asignaGeneracion=(anioNacimiento)=>{
 
-let anioNacimiento=2003;
-switch(edadPersona)
-{
-case (anioNacimiento<1968):
-    return "Baby Boomers";
+    switch(true){
+        case(anioNacimiento<1968):
+        return "Baby Boomer";
 
-    case (anioNacimiento<1968 && anioNacimiento<=1980):
-        return "Generacion X";
+        case(anioNacimiento>1968 && anioNacimiento<=1980):
+        return "Generación X";
 
-        case (anioNacimiento<1968 && anioNacimiento<=1980):
-        return "Generacion X";
+        case(anioNacimiento>1980 && anioNacimiento<=1994):
+        return "Generación Y/Millennial";
 
+        case(anioNacimiento>1994 && anioNacimiento<=2009):
+        return "Generación Z/Centennial";
+
+        case(anioNacimiento>2009):
+        return "Genración Alfa";
+    }
 }
+
+console.log(`Dado que nací en el año 2000 soy de la generación ${asignaGeneracion(2000)}`)

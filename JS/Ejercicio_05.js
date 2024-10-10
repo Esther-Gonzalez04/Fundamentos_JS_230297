@@ -5,7 +5,7 @@ const bg = "linear-gradient(11deg, rgba(0,199,36,1) 0%, rgba(129,255,26,1) 33%, 
 const style_console = `background: ${bg}; color: white; border-radius: 6px; padding: 4px; font-size: 1.0rem; font-weight: bold`
 //Personalizacion de las salidas de consola
 
-console.warn("Práctica 07:Arreglos en Java Script")
+console.warn("Práctica 07: Repaso de ciclos y sentencias de control")
 
 console.log("%c1.- Condicionales - Si/Entonces... (IF)", style_console);
 
@@ -134,3 +134,110 @@ let asignaGeneracion=(anioNacimiento)=>{
 }
 
 console.log(`Dado que nací en el año 2000 soy de la generación ${asignaGeneracion(2000)}`)
+
+console.log("%c4.- Manejo de Excepciones (TRY/CATCH)", style_console);
+
+//En algunos ocaciones existiran errores que no son culpa del programa, sino del usuario, la red, el SO o incluso de un siddleware.,pero que sin duda debemos controlar para evitar las falla de ejecución
+
+//sino lo puede realizar, lo ignora y sigue con el codigo
+console.log("Intentamos dividir: 0/10, el resultado es:")
+
+try{
+    let result= 0/10; //dividir 0 entre un entero
+    console.log(result)
+}
+catch(error)
+{
+    console.log("Ocurrio un error: "+error.message);
+}
+
+
+console.log("Intentamos dividir: 10/0, el resultado es:")
+
+try{
+    let result= 10/0; //dividir un entero entre 0
+    console.log(result)
+}
+catch(error)
+{
+    console.log("Ocurrio un error: "+error.message);
+}
+
+console.log("Intentamos dividir: \"a\"/0, el resultado es:")
+try{
+    let result= "a"/0; //dividir una letra entre 0
+    console.log(result)
+}
+catch(error)
+{
+    console.log("Ocurrio un error: "+error.message);
+}
+
+console.log("Intentamos dividir: a/0, el resultado es:")
+try{
+    let result= a/0; //dividir una variable no definida entre 0
+    console.log(result)
+}
+catch(error)
+{
+    console.log("Ocurrio un error: "+error.message);
+}
+
+console.log("Intentamos dividir: el valor de la variable x entre el valor de la variable y, el resultado es:")
+try{
+    let x=8, y=2, result=x/y; //dividir dos variables definidas 
+    console.log(result)
+}
+catch(error)
+{
+    console.log("Ocurrio un error: "+error.message);
+}
+
+
+console.log("%c5.- Control de ciclos (BREAK / CONTINUA)", style_console);
+
+//En algunas oacasiones será importante detener un ciclo de manera abrupta para controlar casos especiales de un ciclo 
+
+console.log("Vamos a contar del 1 al 10..")
+for(let num=1; num<=10; num++)
+        console.log(num);
+
+console.log("Ahora necesitamos que si llega al 7 para de contar ...suponinedo que solo por hoy es de mala suerte...")
+for(let num=1; num<=10; num++)
+        if(num==7)
+            break;
+        else
+        console.log(num);
+
+console.log("Ahora necesitamos que si llega al 7, te saltes ese número y continues")
+
+        for(let num=1; num<=10; num++)
+        {
+            if(num==7){
+                continue;
+            }
+               
+            console.log(num);
+        }
+        
+console.log("%c6.- Ciclo iterativo -(FOR)", style_console);
+//Recorre de manera iterativa (i), de incremental o decremental
+
+console.log("Los días de la semana son en orden ascendente son:")
+let dias=["Domingo","Lunes", "Martes", "Miercoles", "Jueves","Viernes", "Sábado"]
+
+for(let i=0; i<dias.length; i++){
+    console.log(dias[i])
+}
+        
+
+console.log("Ahora vamos a imprimir los meses del año en orden descendente...")
+let meses=["Enero","Febrero", "Marzo", "Abril", "Mayo","Junio", "Agosto","Septiembre","Octubre", "Noviembre", "Diciembre"]
+for(let i=11; i>=0; i--)
+        {
+            console.log(dias[i])
+        }
+
+console.log("%c7.- Ciclo condicional - (WHILE)", style_console);
+
+

@@ -239,5 +239,62 @@ for(let i=11; i>=0; i--)
         }
 
 console.log("%c7.- Ciclo condicional - (WHILE)", style_console);
+//Estos ciclos (BUCLE) dependen de una condición para continuar ejecutándose
+
+let finDeSemana=false;
+let mensaje="";
+let j=0;
+//while(j<dias.length){
+while(j<dias.length){
+    switch(j){ //Usamos 'j' para que coincida con el índice
+        case 0: 
+            finDeSemana=true;
+            mensaje="Domingo de tarea jajajaja"
+            break;
+        case 1:
+            finDeSemana=false;
+            mensaje="Lunes, noooo el peor día";
+            break;
+        case 2:
+            finDeSemana=false;
+            mensaje="Martes, pues ya que, a seguir chambeando";
+            break;
+        case 3:
+            finDeSemana=false;
+            mensaje="miercoles de hueva";
+            break;
+        case 4:
+            finDeSemana=false;
+            mensaje="jueves de racismo";
+            break;
+        case 5:
+            finDeSemana=false;
+            mensaje="al fin virnecito y el cuerpo lo sabe";
+            break;
+        case 6:
+            finDeSemana=true;
+            mensaje="Sábado de limpiar la casa";
+            break;
+    }
+
+    //Imprimir todos los días
+    //console.log(`Día ${j} ${dias[j]}`)
+    //console.log(`Mensaje del día: ${mensaje}`);
+    //j++;
+
+    //Imprimir los días laborales
+    if(!finDeSemana){
+        console.log(`Día ${j} ${dias[j]}`)
+        console.log(`Mensaje del día: ${mensaje}`);
+    }
+    j++;
+
+    //Imprimir fin de semana
+    //if(finDeSemana){
+    //    console.log(`Día ${j} ${dias[j]}`)
+    //    console.log(`Mensaje del día: ${mensaje}`);
+    //}
+    //j++; 
+}
 
 

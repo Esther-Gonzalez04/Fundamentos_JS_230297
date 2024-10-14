@@ -20,7 +20,7 @@ el objetivo de confirmar los comentarios básicos de la logica de programación.
  |4.|Ejercicio 02: Declaración de Variables de (String/BigInt/Symbol/Null/Function)|6|✅✅Finalizada|
  |5.|Ejercicio 03: Repaso de Objetos|19|✅✅Finalizada|
  |6.|Ejercicio 04: Repaso de Arreglos|18|✅✅Finalizada|
- |7.|Ejercicio 05: Repaso de Ciclos y Sentencias de control|---|Activa|
+ |7.|Ejercicio 05: Repaso de Ciclos y Sentencias de control|16|✅✅Finalizada|
  
 ### Autor
 Esther González Peralta
